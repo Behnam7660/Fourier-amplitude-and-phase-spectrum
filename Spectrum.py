@@ -1,6 +1,5 @@
 import numpy as np
 import scipy.fft
-import scipy.linalg
 import matplotlib.pyplot as plt
 
 # defining the wave
