@@ -3,7 +3,9 @@ This code calculates amlitude and phase spectrum of a given 1D curve usind fft a
 It is consist of three functions: 
 
 1 - amplitude_spectrum(data) : 
+
     data = 1D array representing a wave.
+    
     return = amplitudes, frequencies.
     
 2 - phase_spectrum(data, ignore, tr_order) : 
