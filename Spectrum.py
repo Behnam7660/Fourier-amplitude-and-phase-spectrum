@@ -32,7 +32,7 @@ def amplitude_spectrum(data):
     freq = fp[:,0]
     return amplitude, freq
 
-def phase_spectrum(data, ignore):
+def phase_spectrum(data, ignore, tr_order):
     # Extract phases of frequency components (phase spectrum)=================
     data_points = np.size(data)
     length = np.size(data)
@@ -45,7 +45,7 @@ def phase_spectrum(data, ignore):
     #detect noise (very small numbers (eps)) and ignore them------------------
     # #tolerance threshold
     if ignore == True:
-        threshold = np.max(np.abs(fourier_transformed)) / 10000
+        threshold = np.max(np.abs(fourier_transformed)) / tr_order
         #maskout values that are below the threshold
         fourier_transformed[np.abs(fourier_transformed) < threshold] = 0 
     #seperate real and imaginary parts of fft---------------------------------
