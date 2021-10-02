@@ -81,7 +81,7 @@ def ft_reconstruct(frequencies, amplitudes, phases):
 #-----------------------------------------------------------------------------
 # Spectrum extraction
 amplitudes, frequencies = amplitude_spectrum(y)
-phases, frequencies = phase_spectrum(y, True)
+phases, frequencies = phase_spectrum(y, True, 10000)
 
 # plot
 fig,a =  plt.subplots(2,sharex=True)
