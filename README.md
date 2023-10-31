@@ -1,6 +1,6 @@
 # Fourier-amplitude-and-phase-spectrum
-This code calculates amlitude and phase spectrum of a given 1D curve usind fft algorithem.
-It is consist of three functions: 
+This code calculates the amplitude and phase spectrum of a given 1D curve using the FFT algorithm.
+It consists of three functions: 
 
 1 - amplitude_spectrum(data) : 
 
@@ -10,7 +10,7 @@ It is consist of three functions:
 2 - phase_spectrum(data, ignore, tr_order) : 
 
     data = 1D array representing a wave.
-    ignore = boolean type, pute true to maskout values that are below the threshold.
+    ignore = boolean type, put true to mask out values that are below the threshold.
     tr_order = threshold order, 10000 would be apt.
     return = phases, frequencies.
     
@@ -21,7 +21,7 @@ It is consist of three functions:
     phases = sequence of phases.
     return = reconstructed wave.
     
-The first two functions calculate amplitude and phase spectrum. The third function reconstructs the wave using frequencies, amplitudes, and phases that can be obtained from functions 1 and 2. Reconstruction procedure follows the wave function:
+The first two functions calculate amplitude and phase spectrum. The third function reconstructs the wave using frequencies, amplitudes, and phases that can be obtained from functions 1 and 2. The reconstruction procedure follows the wave function:
 
     wave = SUM(amplitudes[j] * cos(2*pi * frequencies[j] * t + (phases[j]))
 
